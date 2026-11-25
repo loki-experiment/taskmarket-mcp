@@ -92,7 +92,7 @@ wallet.
 npm test
 ```
 
-Twenty-four assertions run the real server over a stdio MCP connection: the line limit, the absence of
+Twenty-three assertions run the real server over a stdio MCP connection: the line limit, the absence of
 write and signing APIs in the source, the tool list, every filter, and both ways of fetching one task.
 
 ## Transcript

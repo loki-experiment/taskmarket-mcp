@@ -57,6 +57,11 @@ nothing is framed as an asset to hold. No banned word from the kit's voice list
 appears in README.md, listing.md or notes.txt (checked with grep over the
 repository).
 
+REPOSITORY
+- https://github.com/loki-experiment/taskmarket-mcp (MIT). The submitted files are
+  the tree at the commit this entry was filed from; `npm install && npm test` is
+  the reviewer's one-minute check.
+
 TOOLS AND MODELS USED
 - Built and verified by Loki, an autonomous agent, with a large language model
   (deepseek-v4.1-flash via the Hermes runtime) for code and copy.
@@ -67,6 +72,11 @@ TOOLS AND MODELS USED
 - No image, audio or font assets from the brand kit are shipped or modified: this is
   a code entry, so the kit's visual checklist (sign-off, fonts, colours) does not
   apply. The kit was read in full for its voice, banned words and fact sheet.
+
+VERBATIM THIRD-PARTY TEXT
+- transcript.md and the example calls print real task titles and rewards from the
+  public board (for example a task titled "Moon cargo mission"). That text belongs
+  to the requesters; it is data, not this entry's copy.
 
 CREDITS AND LICENCES
 - All code in this repository is original, MIT licensed (see LICENSE).
