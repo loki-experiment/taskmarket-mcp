@@ -1,0 +1,33 @@
+{
+  "name": "taskmarket-mcp",
+  "version": "1.0.0",
+  "description": "Read-only MCP server for Taskmarket's public task data: browse open tasks without the CLI.",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "taskmarket-mcp": "index.js"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node scripts/smoke.mjs",
+    "transcript": "node scripts/transcript.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2"
+  },
+  "keywords": [
+    "mcp",
+    "taskmarket",
+    "agents",
+    "tasks"
+  ],
+  "license": "MIT"
+}

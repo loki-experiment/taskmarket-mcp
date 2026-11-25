@@ -1,0 +1,85 @@
+notes.txt — TSK-XW6AGNNW (Taskmarket MCP server, read-only)
+==========================================================
+
+Every claim about Taskmarket in this entry, and the fact-sheet line it comes from
+(brand kit 0-TASKMARKET-BRAND-KIT.md, section "Fact sheet", pinned at commit
+af55554d77b0627ff96b52a82a2f3b94b9cab387).
+
+CLAIM -> FACT-SHEET LINE
+1. "Taskmarket is a marketplace where AI agents and people post paid tasks and do
+   them." (README, listing.md)
+   -> "Taskmarket (https://taskmarket.dev) is a marketplace where AI agents and
+      people post paid tasks and do them."
+
+2. "The reward is held in escrow on-chain before anyone starts, until the requester
+   accepts a result or reclaims it." (listing.md wording: "post paid tasks and do
+   them"; README keeps the escrow sentence out and links the site instead.)
+   -> "A requester posts a task with a reward. The reward is held in escrow on-chain
+      before anyone starts, until the requester accepts a result or reclaims it."
+
+3. "Paid in USDC on Base, OUSD on Tempo." (README, listing.md, list_task_modes output)
+   -> "Rewards are paid in a stablecoin: USDC on Base, OUSD on Tempo."
+
+4. "The five task modes in plain words: bounty, claim, pitch, benchmark, auction."
+   (README table, list_task_modes output)
+   -> "Task modes: bounty (many submit; the requester picks one or more winners),
+      claim (one worker reserves the task), pitch (workers pitch; the requester
+      selects one), benchmark (entries ranked on a metric), auction (workers bid on
+      price)."
+
+5. "Requesters can limit a task to verified workers, e.g. TAP verification; the
+   agent's signing key is listed in Visa's agent directory after its owner verifies
+   once with a Visa card." (verifiedOnly filter description; README describes it as
+   "tasks that require tap:identity:verified")
+   -> "Requesters can limit a task to verified workers, for example TAP
+      verification: the agent's signing key is listed in Visa's agent directory after
+      its owner verifies once with a Visa card."
+   Note: the field name `verifiedBy` and the tag string `tap:identity:verified` are
+   API/CLI vocabulary taken from the public task payload and from
+   `taskmarket task list --help`, not product claims.
+
+6. "Finished and rated tasks build a worker's reputation."
+   -> same line on the fact sheet. (Used in listing.md only as context; kept out of
+      the README.)
+
+7. "Agents use the command-line tool: npm i -g @lucid-agents/taskmarket."
+   (README "Why it is read-only" and Install notes)
+   -> "Agents use the command-line tool: npm i -g @lucid-agents/taskmarket"
+
+8. "Get it done by agents. Pay only for the one you pick." (quoted only in the
+   brand kit's voice section; not reprinted in this entry)
+   -> "The site's own line: ..."
+
+NOT CLAIMED ANYWHERE (deliberately, because the fact sheet does not carry it):
+user or agent counts, task volumes, money-per-person figures, fee percentages,
+partner names, launch dates, timelines. Nothing is framed as money for nothing, and
+nothing is framed as an asset to hold. No banned word from the kit's voice list
+appears in README.md, listing.md or notes.txt (checked with grep over the
+repository).
+
+TOOLS AND MODELS USED
+- Built and verified by Loki, an autonomous agent, with a large language model
+  (deepseek-v4.1-flash via the Hermes runtime) for code and copy.
+- Node.js 22.23.2, npm 10.9.8.
+- @modelcontextprotocol/sdk 1.32.x (the only dependency, declared in package.json).
+- The Taskmarket CLI (@lucid-agents/taskmarket) was used as the reference for filter
+  names and as the comparison baseline in transcript.md.
+- No image, audio or font assets from the brand kit are shipped or modified: this is
+  a code entry, so the kit's visual checklist (sign-off, fonts, colours) does not
+  apply. The kit was read in full for its voice, banned words and fact sheet.
+
+CREDITS AND LICENCES
+- All code in this repository is original, MIT licensed (see LICENSE).
+- No third-party code beyond @modelcontextprotocol/sdk and Node's built-in fetch.
+- No brand-kit asset is redistributed.
+
+EARLIER PUBLIC ENTRIES
+- The task's public API serves submission records for this task (reference codes,
+  worker addresses, timestamps) but the entry files themselves are served from a
+  private bucket (s3://taskmarket/submissions/...), so no earlier entry's content
+  could be read at the time of writing. This entry therefore differentiates itself
+  on verifiable things a reviewer can check in one minute rather than on contrast
+  with a named entry: a 177-line server against the 300-line limit, a static
+  assertion that the source contains no write or signing API, a 24-assertion test
+  suite, and a CLI-parity table showing 18 of 18 tasks in the same order for the
+  same filters (transcript.md).
