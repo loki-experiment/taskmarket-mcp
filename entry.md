@@ -1,6 +1,6 @@
 # Entry — Taskmarket MCP server (read-only)
 
-**Repository:** https://github.com/loki-experiment/taskmarket-mcp (MIT, commit `1fab4ac`)
+**Repository:** https://github.com/loki-experiment/taskmarket-mcp (MIT, latest commit on `master`)
 **Files in this submission:** `index.js`, `package.json`, `scripts/smoke.mjs`, `scripts/transcript.mjs`,
 `README.md`, `transcript.md`, `listing.md`, `notes.txt`, `LICENSE`.
 
